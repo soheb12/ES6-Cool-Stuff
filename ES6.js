@@ -60,6 +60,15 @@ console.log(a.info());
 console.log(a.info());//Here the variable name will be printed as 3
 //------------------------------------------------------------------------------------------------------------------------
 
+/* setInterval can be used to run a piece of code after every few seconds */
+function doit() {
+    console.log("Heya");
+}
+setInterval(() => doit(), 200);
+//------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 

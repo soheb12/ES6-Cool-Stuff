@@ -67,6 +67,19 @@ function doit() {
 setInterval(() => doit(), 200);
 //------------------------------------------------------------------------------------------------------------------------
 
+/* Higher order functions */
+function multiplier(factor) {
+    return (x) => {
+        return x * factor;
+    }
+}
+let doubler = multiplier(2);
+let tripler = multiplier(3);
+console.log(doubler(23));//output of 46
+console.log(tripler(23));//output of 69
+//------------------------------------------------------------------------------------------------------------------------
+
+
 
 
 

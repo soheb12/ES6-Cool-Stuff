@@ -79,7 +79,27 @@ console.log(doubler(23));//output of 46
 console.log(tripler(23));//output of 69
 //------------------------------------------------------------------------------------------------------------------------
 
-
+/* Promisses with arrow function*/
+display("soheb").then((res) => {
+    console.log("Greeting Successfull");
+    console.log("Success : " + res);
+}).catch((err) => {
+    console.log("Greeting UnSuccessfull");
+    console.log("" + err);
+})
+function display(name) {//This is the function that is promissing to do something
+    return new Promise((resolve, reject) => {
+        if (name.length == 0) {
+            reject(new Error("Enter a non empty string"));
+        } else {
+            setTimeout(() => {
+                console.log("Hello " + name);
+                resolve(400)
+            }, 1000);//first argument is a callback
+        }
+    })
+}
+//------------------------------------------------------------------------------------------------------------------------
 
 
 
